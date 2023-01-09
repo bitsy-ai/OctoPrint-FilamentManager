@@ -23,11 +23,15 @@ additional_setup_parameters = {}
 ########################################################################################################################
 
 try:
-    import octoprint_setuptools
-except ImportError:
-    print("Could not import OctoPrint's setuptools, are you sure you are running that under "
-          "the same python installation that OctoPrint is installed under?")
+    from octoprint_nanny.vendor import octoprint_setuptools
+except Exception as e:
+    traceback.print_exc()
+    print(
+        "Could not import OctoPrint's setuptools, are you sure you are running that under "
+        "the same python installation that OctoPrint is installed under?"
+    )
     import sys
+
     sys.exit(-1)
 
 setup_parameters = octoprint_setuptools.create_plugin_setup_parameters(
