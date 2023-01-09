@@ -13,6 +13,7 @@ plugin_author_email = "ollisgit@gmail.com, malnvenshorn@gmail.com"
 plugin_url = "https://github.com/OllisGit/OctoPrint-FilamentManager"
 plugin_license = "AGPLv3"
 plugin_requires = ["backports.csv>=1.0.5,<1.1",
+                   "octoprint>=1.8.6",
                    "uritools>=2.1,<2.2",
                    "SQLAlchemy>=1.4,<1.5"]
 plugin_additional_data = []
